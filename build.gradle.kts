@@ -21,3 +21,13 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+tasks.create<JavaExec>("play") {
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set(if (project.hasProperty("pattern")) {
+        val patternName = project.property("pattern").toString()
+        "dev.nisaldb.patterns.$patternName.play.Play"
+    } else {
+        "NULL"
+    })
+}
