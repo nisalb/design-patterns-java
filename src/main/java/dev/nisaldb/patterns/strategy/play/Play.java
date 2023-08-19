@@ -17,6 +17,6 @@ public class Play {
     }
 
     private static void introduceCharacter(Character character) {
-        System.out.println(String.format("%s\n\tand %s", character.sayName(), character.fight()));
+        System.out.printf("%s\n\tand %s%n", character.sayName(), character.fight());
     }
 }
