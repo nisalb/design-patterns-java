@@ -1,7 +1,3 @@
-import org.apache.tools.ant.taskdefs.Java
-import kotlin.io.path.Path
-import kotlin.system.exitProcess
-
 plugins {
     id("java")
 }
