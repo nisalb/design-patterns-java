@@ -2,6 +2,7 @@ package dev.nisaldb.patterns.strategy.play;
 
 import dev.nisaldb.patterns.strategy.*;
 import dev.nisaldb.patterns.strategy.Character;
+import dev.nisaldb.patterns.strategy.weapon.SwordBehavior;
 
 public class Play {
     public static void main(String[] args) {
@@ -14,6 +15,9 @@ public class Play {
         introduceCharacter(queen);
         introduceCharacter(knight);
         introduceCharacter(troll);
+
+        king.setWeapon(new SwordBehavior());
+        System.out.println("King picked up a weapon and said,\n\tnow " + king.fight());
     }
 
     private static void introduceCharacter(Character character) {
